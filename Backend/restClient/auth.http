@@ -1,0 +1,19 @@
+### Create a new user
+POST http://localhost:3000/auth/create-user
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "user@google.com",
+    "password": "test12"
+}
+
+### Login an existing user
+POST http://localhost:3000/auth/login-user
+Content-Type: application/json
+
+{
+    "email": "user@google.com",
+    "password": "test12"
+}

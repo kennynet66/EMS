@@ -1,0 +1,16 @@
+### Get all users
+GET http://localhost:3000/user/all-users
+
+### Get one user
+GET http://localhost:3000/user/one-user/trymikiefm-ecsbjdiueg-dxxyegugrp
+
+### Delete a user by id
+DELETE  http://localhost:3000/user/delete-user/trym1kiefm-e2sbjdiueg-s3xyegugrp
+
+### Update The user profile pic
+POST http://localhost:3000/user/profile-pic/trym1kiefm-e2sbjdiueg-s3xyegugrp
+Content-Type: application/json
+
+{
+    "profilePic": "https://picsum.photos/721/400"
+}
