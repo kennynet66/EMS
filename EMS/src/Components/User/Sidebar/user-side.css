@@ -1,0 +1,10 @@
+.logo-img {
+    height: 50px;
+}
+
+.side {
+    height: 100vh;
+    background-color: #dbdbdb;
+    width: 20vw;
+    padding: 10px;
+}

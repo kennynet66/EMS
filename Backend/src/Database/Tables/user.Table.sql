@@ -1,6 +1,10 @@
-CREATE TABLE Users {
-    userId VARCHAR(255) UNIQUE,
-    firstName VARCHAR(255),
-    lastName VARCHAR(255),
-    email VARCHAR(255)
-}
+CREATE TABLE Users(
+    userId VARCHAR(255) UNIQUE NOT NULL,
+    firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	isAdmin BIT DEFAULT 0 NOT NULL,
+	profilePic  VARCHAR(255) DEFAULT 'https://picsum.photos/721/400' NOT NULL,
+	isWelcomed BIT DEFAULT 0 NOT NULL
+)

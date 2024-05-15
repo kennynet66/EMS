@@ -1,13 +1,12 @@
 import './App.css'
-import Login from './Components/Login/login'
-import Signup from './Components/Signup/signup'
+import Navbar from './Components/Navbar/navbar'
 
 function App() {
 
   return (
     <>
-      <Login />
-      <Signup />
+    < Navbar/>
+      <h1>Landing page</h1>
     </>
   )
 }

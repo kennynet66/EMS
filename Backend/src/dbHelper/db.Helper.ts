@@ -5,7 +5,6 @@ import { sqlConfig } from "../Config/sql.config";
 dotenv.config();
 
 const pool = new sql.ConnectionPool(sqlConfig);
-console.log(pool);
 
 const poolConnect = pool.connect();
 

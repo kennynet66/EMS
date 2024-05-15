@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background-color: #dbdbdb4a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    background-color: dodgerblue;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
