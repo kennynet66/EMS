@@ -7,4 +7,71 @@
     background-color: #dbdbdb;
     width: 20vw;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logout-btn {
+    cursor: pointer;
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+li{
+    list-style: none;
+}
+
+li > .side-link {
+    text-decoration: none;
+    margin: 5px 20px;
+    color: #000000;
+}
+
+li > .side-link:hover {
+    text-decoration: underline;
+}
+
+.main-link, .perfomance-links {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    margin: 2% 0;
+    justify-content: space-between;
+}
+
+.fast-links, .Pfast-links {
+    display: none;
+}
+
+.main-active{
+    .fast-links {
+        display: block;
+    }
+    .bar {
+        transform: rotate(180deg);
+    }
+    .main-link {
+        background-color: dodgerblue;
+        color: #ffffff;
+    }
+}
+
+.perfomance-active {
+    .Pfast-links {
+        display: block;
+    }
+    .perfomance-bar {
+        transform: rotate(180deg);
+    }
+    .perfomance-links {
+        background-color: dodgerblue;
+        color: #ffffff;
+    }
 }

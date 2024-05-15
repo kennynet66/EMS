@@ -7,6 +7,7 @@ import Login from './Components/Login/login.jsx';
 import Signup from './Components/Signup/signup.jsx';
 import NotFound from './Components/notFound/notFound.jsx';
 import Dashboard from './Components/User/Dashboard/user-dash.jsx';
+import Profile from './Components/User/Profile/profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,16 +16,22 @@ const router = createBrowserRouter([
     errorElement: <NotFound />
   },
   {
-    path: '/login',
+    path: 'login',
     element: <Login />
   },
   {
-    path: '/register',
+    path: 'register',
     element: <Signup />
   },
   {
-    path: '/dashboard',
-    element: <Dashboard />
+    path: 'dashboard',
+    element: <Dashboard />,
+    children: [
+      {
+        path: 'profile',
+        element: <Profile />
+      }
+    ]
   }
 ]);
 

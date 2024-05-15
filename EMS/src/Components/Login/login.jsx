@@ -51,7 +51,7 @@ function Login() {
     console.log(data);
     
     if(data.success) {
-      showSuccess(data.success, '/dashboard');
+      showSuccess(data.success, '/dashboard/profile');
       localStorage.setItem('_auth_token', data.token);
     } else if(data.error) {
       showError(data.error)
@@ -87,6 +87,10 @@ function Login() {
                 required
                 placeholder="Enter your password"
               />
+              <div className="input-field">
+                <input type="checkbox" name="show-pass" id="show-pass" />
+                <p>Show password</p>
+              </div>
               <p className="pass-err" id="error"></p>
             </div>
             <div className="input-div">

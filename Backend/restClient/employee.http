@@ -1,0 +1,11 @@
+POST http://localhost:3000/employee/new-employee
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "salary": 12345,
+    "profilePic": "hieudhoeh",
+    "role": "6e486cf2-acc5-4fba-8084-adde0f1f891b",
+    "email": "john@gmail.com"
+}
