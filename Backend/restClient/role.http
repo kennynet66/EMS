@@ -2,7 +2,7 @@ POST http://localhost:3000/role/new-role
 Content-Type: application/json
 
 {
-    "roleName": "Qa Engineer"
+    "roleName": ""
 }
 
 ### Fetch all roles

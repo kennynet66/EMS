@@ -8,6 +8,9 @@ import Signup from './Components/Signup/signup.jsx';
 import NotFound from './Components/notFound/notFound.jsx';
 import Dashboard from './Components/User/Dashboard/user-dash.jsx';
 import Profile from './Components/User/Profile/profile.jsx';
+import AdminDash from './Components/Admin/Dash/AdminDash.jsx';
+import Role from './Components/Admin/Role/Role.jsx';
+import AllRoles from './Components/Admin/Role/allRoles.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,22 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <Profile />
+      }
+    ]
+  },
+  {
+    path: 'admin',
+    element: <AdminDash />,
+    children: [
+      {
+        path: 'new-role',
+        element: <Role />,
+        children: [
+          {
+            path: 'all-roles',
+            element: <AllRoles />
+          }
+        ]
       }
     ]
   }

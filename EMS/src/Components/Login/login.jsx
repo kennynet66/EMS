@@ -48,11 +48,23 @@ function Login() {
     });
 
     const data = await result.json()
-    console.log(data);
     
     if(data.success) {
-      showSuccess(data.success, '/dashboard/profile');
-      localStorage.setItem('_auth_token', data.token);
+      const result = await fetch('http://localhost:3000/auth/details', {
+        method: 'GET',
+        headers: {
+          token: data.token
+        }
+      });
+      const details = await result.json();
+
+      if(!details.info.isAdmin) {
+        showSuccess(data.success, '/dashboard/profile');
+        localStorage.setItem('_auth_token', data.token);
+      } else if(details.info.isAdmin) {
+        showSuccess(data.success, '../admin');
+        localStorage.setItem('_auth_token', data.token);
+      }
     } else if(data.error) {
       showError(data.error)
     }

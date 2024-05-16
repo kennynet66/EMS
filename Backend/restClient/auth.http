@@ -17,3 +17,7 @@ Content-Type: application/json
     "email": "admin@admin.com",
     "password": "admin"
 }
+
+### Check User details
+GET http://localhost:3000/auth/details
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBZG1pbiIsImxhc3ROYW1lIjoiTWFpbmEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJJZCI6IjZkNTk0OWQwLTIzYzctNGZmYi1hMzZiLTA0Y2E1OWM5ZTE4ZCIsImlzQWRtaW4iOmZhbHNlLCJwcm9maWxlUGljIjoiaHR0cHM6Ly9waWNzdW0ucGhvdG9zLzcyMS80MDAiLCJpYXQiOjE3MTU4NTczMTgsImV4cCI6MTcxNTk2MDk5OH0.3HWzyl2r8hDJI7F_e2_7dRSMuaOCF9axONc17plbg64

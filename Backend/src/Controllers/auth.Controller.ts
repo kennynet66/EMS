@@ -8,6 +8,7 @@ import { sqlConfig } from "../Config/sql.config";
 import { loginSchema, registerSchema } from "../Validators/auth.Validator";
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
+import { ExtendedUserRequest } from "../Middleware/verifyToken";
 
 const MAXAGE = 3 * 24 * 24 * 60
 
@@ -101,7 +102,15 @@ export const loginUser = (async (req: Request, res: Response) => {
         if (result.length >= 1) {
             const correctPwd = await bcrypt.compare(user.password, result[0].password);
             if (correctPwd) {
-                const token = createToken(result[0]);
+                const userDetails = {
+                    firstName: result[0].firstName,
+                    lastName: result[0].lastName,
+                    email: result[0].email,
+                    userId: result[0].userId,
+                    isAdmin: result[0].isAdmin,
+                    profilePic: result[0].profilePic
+                }
+                const token = createToken(userDetails);
         
                 return res.status(200).json({
                     success: "Login success",
@@ -124,3 +133,11 @@ export const loginUser = (async (req: Request, res: Response) => {
         )
     }
 });
+
+export const checkUserDetails = (async (req: ExtendedUserRequest, res: Response) => {
+    if (req.info) {
+        return res.json({
+            info: req.info
+        })
+    }
+})
