@@ -1,0 +1,47 @@
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.profile-div {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-pic {
+    align-self: flex-start;
+}
+
+.pic-link {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: dodgerblue;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.picU {
+    display: flex;
+}
+
+.close-link {
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2% 0;
+}

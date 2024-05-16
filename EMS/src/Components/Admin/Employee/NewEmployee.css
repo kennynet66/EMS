@@ -1,0 +1,10 @@
+.new-employee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form {
+    width: 50%;
+}

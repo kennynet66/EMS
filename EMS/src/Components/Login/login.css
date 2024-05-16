@@ -21,7 +21,7 @@
     color: red;
 }
 
-.input-div > input {
+.input-div > input, select {
     padding: 10px;
     width: 100%;
     margin: 2%;

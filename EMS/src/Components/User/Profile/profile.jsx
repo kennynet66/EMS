@@ -1,23 +1,23 @@
 import { useState, useEffect } from "react";
+import "./profile.css";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Profile() {
+  const [loading, setLoading] = useState(true);
   const [profilePic, setProfilePic] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
 
-  window.onload = () => {
-    getToken();
-  };
+  useEffect(() => {
+    // getToken()
+    const token = getToken();
 
-  window.addEventListener("DOMContentLoaded", () => {
-    getToken();
-  });
+    checkUserDetails(token);
+  }, []);
 
   const getToken = () => {
-    let token = localStorage.getItem("_auth_token");
-    console.log(token);
-    checkUserDetails(token);
-    return token;
+    return localStorage.getItem("_auth_token");
   };
 
   const checkUserDetails = async (token) => {
@@ -29,15 +29,33 @@ export default function Profile() {
     });
 
     const data = await results.json();
-
-
+    console.log(data);
+    setFirstName(data.info.firstName);
+    setLastName(data.info.lastName);
+    setProfilePic(data.info.profilePic);
+    setEmail(data.info.email);
+    setLoading(false);
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
-      <p>{firstName}</p>
-      <p>{lastName}</p>
-      <img src={profilePic} alt="" />
+      <div className="profile">
+        <div className="profile-div">
+          <img src={profilePic} alt="" className="profile-pic" />
+        </div>
+        <h4>
+          {firstName} {lastName}
+        </h4>
+        <p>{email}</p>
+        <div className="update-pic">
+          <Link to="update-profile" className="pic-link">Update profile picture</Link>
+        </div>
+        <Outlet />
+      </div>
     </>
   );
 }
