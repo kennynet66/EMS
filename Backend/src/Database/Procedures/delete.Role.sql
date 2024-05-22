@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE deleteRole(@roleId VARCHAR(255))
+AS
+BEGIN
+    DELETE FROM Role WHERE roleId = @roleId;
+END

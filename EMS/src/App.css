@@ -1,0 +1,33 @@
+/* Landing.css */
+
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 60px;
+  }
+  
+  .landing-content {
+    text-align: center;
+  }
+  
+  .primary-button {
+    background-color: white;
+    color: dodgerblue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .primary-button:hover {
+    background-color: dodgerblue;
+    color: white;
+  }
+  

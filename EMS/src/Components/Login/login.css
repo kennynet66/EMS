@@ -34,3 +34,10 @@
     width: 25%;
     text-align: center;
 }
+
+.drr {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}

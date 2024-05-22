@@ -7,3 +7,6 @@ Content-Type: application/json
 
 ### Fetch all roles
 GET http://localhost:3000/role/all-roles
+
+### Delete a role by id
+DELETE  http://localhost:3000/role/delete/53af4f80-19c8-40e2-bd87-08e5944bbe7f

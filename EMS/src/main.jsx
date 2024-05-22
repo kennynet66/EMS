@@ -13,6 +13,7 @@ import Role from "./Components/Admin/Role/Role.jsx";
 import AllRoles from "./Components/Admin/Role/allRoles.jsx";
 import NewEmployee from "./Components/Admin/Employee/NewEmployee.jsx";
 import Update from "./Components/User/Profile/update.jsx";
+import AllEmployees from "./Components/Admin/Employee/AllEmployees.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
         path: "new-employee",
         element: <NewEmployee />,
       },
+      {
+        path: 'employees',
+        element: <AllEmployees />
+      }
     ],
   },
 ]);

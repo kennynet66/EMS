@@ -8,3 +8,43 @@
 .form {
     width: 50%;
 }
+th {
+    padding: 8px;
+}
+
+.actions {
+    display: flex;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px;
+    border: none;
+    margin: 2%;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: #ED2939;
+}
+
+.delete-btn:hover {
+    background-color: #D21F3C;
+}
+
+.edit-btn {
+    background-color: #29AB87;
+}
+
+.edit-btn:hover {
+    background-color: #00755E;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 2% 0;
+}

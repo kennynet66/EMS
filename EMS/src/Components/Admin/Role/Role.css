@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-.open-roles, .close-roles {
+.open-roles {
     text-decoration: none;
     color: #000000;
     /* background-color: dodgerblue; */
@@ -26,7 +26,17 @@
     cursor: pointer;
 }
 
-.open-roles:hover, .close-roles:hover {
+.close-roles {
+    background-color: #ED2939;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+}
+.close-roles:hover {
+    background-color: #D21F3C;
+}
+.open-roles:hover {
     text-decoration: underline;
 }
 
@@ -34,4 +44,17 @@
 .view-roles{
     /* border: 2px solid red; */
     margin: 0 2%;
+}
+
+.delete-role {
+    background-color: #ED2939;
+    padding: 8px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-role:hover {
+    background-color: #D21F3C;
 }

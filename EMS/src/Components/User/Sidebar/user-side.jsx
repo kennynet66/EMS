@@ -1,8 +1,10 @@
 import "./user-side.css";
 import logo from "../../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function User_side() {
+  const navigate = useNavigate();
+
   const openDashDrop = () => {
     const btn = document.querySelector(".side-links");
     // const btn2 = document.querySelector()
@@ -15,6 +17,11 @@ export default function User_side() {
     btn.classList.remove("main-active");
     btn.classList.toggle("perfomance-active");
   };
+
+  const logout = () => {
+    localStorage.removeItem("_auth_token");
+    navigate('/');
+  }
 
   return (
     <>
@@ -56,7 +63,7 @@ export default function User_side() {
           </ul>
         </div>
 
-        <button className="logout-btn">Logout</button>
+        <button className="logout-btn" onClick={logout}>Logout</button>
       </div>
     </>
   );

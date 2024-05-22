@@ -32,6 +32,17 @@ function Login() {
       showConfirmButton: false,
       timer: 1500
     })
+  };
+
+  const showPass = () => {
+    const passField = document.querySelector(".password");
+    const checkBox = document.querySelector("#show-pass");
+
+    if(checkBox.checked){
+      passField.type = "text"
+    } else {
+      passField.type = "password"
+    }
   }
 
   const loginUser = async (e) => {
@@ -99,8 +110,8 @@ function Login() {
                 required
                 placeholder="Enter your password"
               />
-              <div className="input-field">
-                <input type="checkbox" name="show-pass" id="show-pass" />
+              <div className="input-field drr">
+                <input type="checkbox" name="show-pass" onChange={showPass} id="show-pass" />
                 <p>Show password</p>
               </div>
               <p className="pass-err" id="error"></p>

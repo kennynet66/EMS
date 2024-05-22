@@ -30,6 +30,7 @@
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 8px;
 }
 
 .picU {
@@ -44,4 +45,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin: 2% 0;
+}
+
+.update-btn {
+    background-color: #00F0A8;
+    cursor: pointer;
 }

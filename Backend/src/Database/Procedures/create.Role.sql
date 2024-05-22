@@ -1,6 +1,6 @@
 CREATE OR ALTER PROCEDURE createRole(
     @roleId VARCHAR(255),
-    @roleName VARCHAR(255),
+    @roleName VARCHAR(255)
 )
 AS
 BEGIN

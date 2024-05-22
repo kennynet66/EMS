@@ -6,7 +6,13 @@ function App() {
   return (
     <>
     < Navbar/>
-      <h1>Landing page</h1>
+    <div className="landing-container">
+      <div className="landing-content">
+        <h1>Welcome to the Employee Management System</h1>
+        <p>Manage your employees efficiently and effectively.</p>
+        <button className="primary-button">Get Started</button>
+      </div>
+    </div>
     </>
   )
 }

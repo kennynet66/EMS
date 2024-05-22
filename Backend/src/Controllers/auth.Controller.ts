@@ -43,10 +43,10 @@ export const registerUser = (async (req: Request, res: Response) => {
         const pool = await mssql.connect(sqlConfig)
 
         const result = (await pool.request()
-        .input("firstName", mssql.VarChar, user.firstName)
-        .input("lastName", mssql.VarChar, user.lastName)
-        .input("email", mssql.VarChar, user.email)
-        .input("password", mssql.VarChar, hashPwd)
+        .input("firstName", mssql.VarChar, user.firstName.toLocaleLowerCase().trim())
+        .input("lastName", mssql.VarChar, user.lastName.toLocaleLowerCase().trim())
+        .input("email", mssql.VarChar, user.email.toLocaleLowerCase().trim())
+        .input("password", mssql.VarChar, hashPwd.trim())
         .input("userId", mssql.VarChar, userId)
         .execute('createUser')
         ).rowsAffected

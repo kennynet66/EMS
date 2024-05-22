@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 
 export default function AdminSide() {
+  const navigate = useNavigate();
+
   const openDashDrop = () => {
     const btn = document.querySelector(".side-links");
     // const btn2 = document.querySelector()
@@ -14,6 +16,11 @@ export default function AdminSide() {
     btn.classList.remove("main-active");
     btn.classList.toggle("perfomance-active");
   };
+
+  const logout = () => {
+    localStorage.removeItem("_auth_token");
+    navigate("/");
+  }
 
   return (
     <>
@@ -32,7 +39,7 @@ export default function AdminSide() {
             <Link to="new-role" className="side-link">
               Add a new role
             </Link>
-            <Link to="" className="side-link">
+            <Link to="Employees" className="side-link">
               Employees
             </Link>
             <Link to="new-employee" className="side-link">
@@ -55,7 +62,7 @@ export default function AdminSide() {
           </ul>
         </div>
 
-        <button className="logout-btn">Logout</button>
+        <button className="logout-btn" onClick={logout}>Logout</button>
       </div>
     </>
   );

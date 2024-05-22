@@ -4,8 +4,9 @@ CREATE OR ALTER PROCEDURE createEmployee(
     @lastName VARCHAR(255),
     @email VARCHAR(255),
     @salary MONEY,
-    @profilePic: string,
-    @role string,
+    @profilePic VARCHAR(255),
+    @role VARCHAR(255),
+    @password VARCHAR(255)
 )
 AS
 BEGIN
@@ -17,7 +18,8 @@ BEGIN
         salary,
         profilePic,
         role,
-        memberSince
+        memberSince,
+        password
     )
     VALUES(
         @employeeId,
@@ -26,6 +28,8 @@ BEGIN
         @email,
         @salary,
         @profilePic,
-        @role
-        GETDATE()
+        @role,
+        GETDATE(),
+        @password
     )
+END

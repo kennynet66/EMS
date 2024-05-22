@@ -52,7 +52,7 @@ export default function Profile() {
         </h4>
         <p>{email}</p>
         <div className="update-pic">
-          <Link to="update-profile" className="pic-link">Update profile picture</Link>
+          <Link to="update-profile" className="pic-link">Update profile</Link>
         </div>
         <Outlet />
       </div>

@@ -20,7 +20,8 @@ export default function Role() {
       position: "center",
       icon: "error",
       title: msg,
-      showConfirmButton: true,
+      showConfirmButton: false,
+      timer: 1500
     });
   };
 
@@ -57,7 +58,7 @@ export default function Role() {
               type="text"
               placeholder="Enter the role name"
               value={roleName}
-              // required
+              required
               onChange={(e) => {
                 setRoleName(e.target.value);
               }}

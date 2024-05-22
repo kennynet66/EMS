@@ -2,10 +2,14 @@ POST http://localhost:3000/employee/new-employee
 Content-Type: application/json
 
 {
-    "firstName": "John",
-    "lastName": "Doe",
-    "salary": 12345,
-    "profilePic": "hieudhoeh",
-    "role": "6e486cf2-acc5-4fba-8084-adde0f1f891b",
-    "email": "john@gmail.com"
+    "firstName": "James",
+    "lastName": "Maina",
+    "salary": 80000,
+    "profilePic": "https://picsum.photos/721/400",
+    "role": "65b3b095-8e31-4ef9-86ad-e5f08722be7f",
+    "email": "jamesmaina@gmail.com",
+    "password": "test12"
 }
+
+### Get all employees
+GET http://localhost:3000/employee/all-employees

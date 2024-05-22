@@ -4,5 +4,6 @@ export interface Employee {
     salary: number,
     profilePic: string,
     role: string,
-    email: string
+    email: string,
+    password: string
 }

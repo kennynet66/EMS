@@ -50,3 +50,21 @@ export const getRoles = (async (req: Request, res: Response) => {
         });
     }
 });
+
+// Delete role
+export const deleteRole = (async (req: Request, res: Response) => {
+    try {
+        const roleId = req.params.id;
+        
+        let procedure = "deleteRole";
+        const result = await execute(procedure, {roleId});
+
+        return res.status(200).json({
+            success: "Role deleted successfully"
+        })
+    } catch (error) {
+        return res.status(500).json({
+            error
+        })
+    }
+});
